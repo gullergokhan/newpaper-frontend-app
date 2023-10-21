@@ -1,0 +1,33 @@
+.sidebar {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0px; 
+    left: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+  }
+  
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  .sidebar-content{
+    margin-top: 5px;
+  }

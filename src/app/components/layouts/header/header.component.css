@@ -1,0 +1,33 @@
+
+.navbar {
+    padding: 10px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; 
+    text-decoration: none; 
+  }
+  
+  .form-control {
+    width: 150px;
+  }
+  
+ 
+  .breadcrumb-container {
+    background-color: #f8f9fa; 
+    padding: 10px 0;
+  }
+  
+  .breadcrumb-item a {
+    color: #333; 
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .breadcrumb-divider {
+    margin: 0 5px;
+    color: #333; 
+  }
+  

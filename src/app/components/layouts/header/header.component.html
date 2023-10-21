@@ -1,0 +1,31 @@
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <div class="container">
+    <a class="navbar-brand" href="/about">Gökhan GÜLLER</a>
+    <form class="form-inline">
+      <div class="input-group">
+        <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Ara" style="width: 100px;">
+        <div class="input-group-append">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ara</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb-container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+     
+      <ng-container *ngFor="let crumb of breadcrumbs; let last = last">
+        <li class="breadcrumb-item">
+          <ng-container *ngIf="last; else notLast">{{ crumb }}</ng-container>
+          <ng-template #notLast>
+            <a href="#">{{ crumb }}</a>
+          </ng-template>
+        </li>
+      </ng-container>
+    </ol>
+  </nav>
+</div>

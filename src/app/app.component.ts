@@ -1,14 +1,22 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { AppService } from 'src/services/app.service';
+
 
 @Component({
   selector: 'app-root',
+  template: `
+  <router-outlet></router-outlet>`,
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [CommonModule, RouterModule]
 })
 export class AppComponent {
-  title = 'newpaper-frontend-app';
+  constructor(
+    private _app:AppService
+  ){
+    _app.get((res)=> {
+      // console.log(res);
+    })
+  }
 }

@@ -1,0 +1,29 @@
+<!-- Haberler Bileşeni -->
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="col" *ngFor="let post of currentPosts">
+      <div class="card mb-4">
+        <img *ngIf="post.urlToImage; else noImage" [src]="post.urlToImage" alt="Haber Resmi" class="card-img-top">
+        <ng-template #noImage>
+          <!-- <img src="https://cdn.create.vista.com/api/media/small/415552188/stock-video-digital-world-breaking-news-studio-background-news-report-breaking-news?videoStaticPreview=true&token=" class="card-img-top"> -->
+        </ng-template>
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.description }}</p>
+        </div>
+        <div class="card-footer">
+          <a [href]="post.url" target="_blank" class="btn btn-primary">Devamını Oku</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sayfalama Bileşeni -->
+<div class="container">
+    <ul class="pagination justify-content-end">
+      <li class="page-item" *ngFor="let page of pages; let i = index">
+        <a class="page-link" (click)="setCurrentPage(i + 1)">{{ i + 1 }}</a>
+      </li>
+    </ul>
+  </div>
